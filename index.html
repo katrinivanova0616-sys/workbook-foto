@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ru">
 <head>
-<meta name="wb-build" content="20261122-023703">
+<meta name="wb-build" content="20261122-024006">
 <script>
 (function(){try{var m=document.querySelector('meta[name="wb-build"]');if(!m||!window.fetch)return;var cur=m.content;
  fetch(location.pathname+'?_='+Date.now(),{cache:'no-store'}).then(function(r){return r.text()}).then(function(t){
@@ -1604,7 +1604,8 @@ figcaption b{display:block;font:800 14px Manrope,sans-serif;color:var(--ink);mar
 .side-f .shot-im img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover}
 .side-f figcaption{text-align:center}
 .side-f figcaption,.sld-t figcaption{padding:9px 2px 0;font:600 12.5px/1.45 Manrope,sans-serif;color:var(--ink-2)}
-@media (max-width:520px){.split{grid-template-columns:minmax(0,1fr);gap:16px}.split-s{padding:12px}}
+@media (max-width:700px){.split{grid-template-columns:minmax(0,1fr) min(var(--sw,300px),40%);gap:14px}.split-s{padding:8px;border-radius:16px}.split-s .sld-h b{display:none}.side-f figcaption,.sld-t figcaption{font-size:11.5px}}
+@media (max-width:430px){.split{grid-template-columns:minmax(0,1fr);gap:16px}.split-s{padding:12px;width:100%;max-width:250px;margin:0 auto}.split.wd>.split-s{max-width:none}}
 @media (max-width:900px){.split{gap:18px}.split-s{padding:10px;border-radius:18px}}
 /* ---- листалка фото ---- */
 .sld{margin:20px 0 8px;padding:16px 0 18px;border-radius:22px;background:linear-gradient(180deg,color-mix(in srgb,var(--fs,#e2f3ff) 60%,#fff),#fff 92%);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--fc,#1e9bff) 14%,transparent)}
