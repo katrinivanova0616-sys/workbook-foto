@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="ru">
 <head>
-<meta name="wb-build" content="20261122-005013">
+<meta name="wb-build" content="20261122-005213">
 <script>
 (function(){try{var m=document.querySelector('meta[name="wb-build"]');if(!m||!window.fetch)return;var cur=m.content;
- fetch(location.pathname,{cache:'no-store'}).then(function(r){return r.text()}).then(function(t){
+ fetch(location.pathname+'?_='+Date.now(),{cache:'no-store'}).then(function(r){return r.text()}).then(function(t){
   var x=/name="wb-build" content="([^"]+)"/.exec(t);if(!x||x[1]===cur)return;
   if(location.search.indexOf('b='+x[1])>-1)return;
   location.replace(location.pathname+'?b='+x[1]+location.hash)}).catch(function(){})}catch(e){}})();
