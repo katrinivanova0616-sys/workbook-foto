@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ru">
 <head>
-<meta name="wb-build" content="20261122-025828">
+<meta name="wb-build" content="20261122-032134">
 <script>
 (function(){try{var m=document.querySelector('meta[name="wb-build"]');if(!m||!window.fetch)return;var cur=m.content;
  fetch(location.pathname+'?_='+Date.now(),{cache:'no-store'}).then(function(r){return r.text()}).then(function(t){
@@ -13,9 +13,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#f7f7fa">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Воркбук 04">
-<title>Нейрофотосессии — воркбук 04</title>
-<meta name="description" content="Воркбук 04 · Нейропедалирование: нейро-двойник и нейромодель, язык камеры, промпт по формуле, фотосессия в образе, съёмка товара и правки без потери лица.">
+<meta name="apple-mobile-web-app-title" content="Урок 04">
+<title>Нейрофотосессии — урок 04</title>
+<meta name="description" content="Урок 04 · Нейропедалирование: нейро-двойник и нейромодель, язык камеры, промпт по формуле, фотосессия в образе, съёмка товара и правки без потери лица.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Caveat:wght@700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -1725,7 +1725,7 @@ figcaption b{display:block;font:800 14px Manrope,sans-serif;color:var(--ink);mar
   </div></div>
 
   <div class="finder" id="folders">
-    <div class="finder-bar"><span class="lights"><i></i><i></i><i></i></span><span class="finder-title"><svg><use href="#folder"/></svg>Воркбук 04 — Нейрофотосессии</span><span class="finder-count">18 папок</span></div>
+    <div class="finder-bar"><span class="lights"><i></i><i></i><i></i></span><span class="finder-title"><svg><use href="#folder"/></svg>Урок 04 — Нейрофотосессии</span><span class="finder-count">18 папок</span></div>
     <div class="folders" style="grid-template-columns:repeat(9,minmax(0,1fr))">
       <div class="frow">Урок по порядку · 8 модулей</div>
       <button class="folder-btn" data-go="13" type="button">
@@ -2744,7 +2744,7 @@ Do not alter the face, identity, body, bust size, skin, hair, expression, pose, 
   document.getElementById('loadProg').addEventListener('click',function(){pf.click()});
   pf.addEventListener('change',function(){
     var f=pf.files[0];if(!f)return;var r=new FileReader();
-    r.onload=function(){try{var d=JSON.parse(r.result);if(!d||d.site!=='workbook-foto')throw 0;store.set('wbfoto-checks',d.checks||{});store.set('wbfoto-favs',d.favs||[]);store.set('wbfoto-lesson',d.lesson||'1');location.reload()}catch(e){alert('Это не файл прогресса воркбука про фотосессии')}};
+    r.onload=function(){try{var d=JSON.parse(r.result);if(!d||d.site!=='workbook-foto')throw 0;store.set('wbfoto-checks',d.checks||{});store.set('wbfoto-favs',d.favs||[]);store.set('wbfoto-lesson',d.lesson||'1');location.reload()}catch(e){alert('Это не файл прогресса урока про фотосессии')}};
     r.readAsText(f);
   });
 
@@ -2944,5 +2944,84 @@ function cur(){var c=t.scrollLeft+t.clientWidth/2,b=0,d=1e9;for(var i=0;i<f.leng
 function upd(){var i=t.scrollLeft<4?0:(t.scrollLeft>t.scrollWidth-t.clientWidth-4?f.length-1:cur());n.textContent=(i+1)+' / '+f.length;p.disabled=t.scrollLeft<4;x.disabled=t.scrollLeft>t.scrollWidth-t.clientWidth-4}
 function go(k){var i=Math.max(0,Math.min(f.length-1,cur()+k)),e=f[i];t.scrollTo({left:e.offsetLeft-t.offsetLeft-(t.clientWidth-e.offsetWidth)/2,behavior:'smooth'})}
 p.onclick=function(){go(-1)};x.onclick=function(){go(1)};var r;t.addEventListener('scroll',function(){cancelAnimationFrame(r);r=requestAnimationFrame(upd)});window.addEventListener('resize',upd);setTimeout(upd,300);upd()})})();</script>
+<!-- NP-NAV -->
+<style>
+.brand a{color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.brand a svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;opacity:.7}
+.np-a{display:inline-flex;align-items:center;gap:7px;padding:9px 13px;border-radius:13px;font:800 13px Manrope,sans-serif;color:#0c0c10;text-decoration:none;background:linear-gradient(180deg,#fff,#f2f2f6);box-shadow:inset 0 2px 0 #fff,inset 0 -3px 0 rgba(12,12,16,.06),0 4px 10px rgba(40,30,80,.1);white-space:nowrap}
+.np-a.dark{color:#fff;background:linear-gradient(180deg,#6cc4ff,#1e9bff);box-shadow:inset 0 2px 0 rgba(255,255,255,.5),inset 0 -4px 0 rgba(0,70,150,.22),0 8px 18px rgba(30,155,255,.32)}
+.np-a.off{color:#9898a4;background:#f2f2f6;box-shadow:inset 0 0 0 1px rgba(12,12,16,.07);cursor:default}
+.np-a svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.np-fab{position:fixed;left:20px;bottom:22px;z-index:60;display:grid;place-items:center;width:56px;height:56px;border:0;border-radius:20px;cursor:pointer;color:#0c0c10;background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(22px) saturate(1.6);backdrop-filter:blur(22px) saturate(1.6);box-shadow:inset 0 1px 0 #fff,0 0 0 1px rgba(12,12,16,.07),0 14px 32px rgba(40,30,80,.14);transition:transform .2s cubic-bezier(.2,.8,.2,1)}
+.np-fab:hover{transform:translateY(-2px)}
+.np-fab i{display:block;width:22px;height:2.6px;border-radius:3px;background:#0c0c10;box-shadow:0 7px 0 #1e9bff,0 -7px 0 #ff2e97;transition:.2s}
+.np-fab.on i{background:transparent;box-shadow:none;position:relative}.np-fab.on i::before,.np-fab.on i::after{content:"";position:absolute;inset:0;border-radius:3px;background:#0c0c10;rotate:45deg}.np-fab.on i::after{rotate:-45deg}
+.np-menu{position:fixed;left:20px;bottom:90px;z-index:60;width:min(340px,calc(100vw - 40px));padding:12px;border-radius:26px;background:rgba(255,255,255,.86);-webkit-backdrop-filter:blur(26px) saturate(1.6);backdrop-filter:blur(26px) saturate(1.6);box-shadow:inset 0 1px 0 #fff,0 0 0 1px rgba(12,12,16,.08),0 30px 60px rgba(20,20,60,.26);opacity:0;visibility:hidden;transform:translateY(12px) scale(.97);transform-origin:left bottom;transition:.22s cubic-bezier(.2,.8,.2,1)}
+.np-menu.on{opacity:1;visibility:visible;transform:none}
+.np-menu h6{margin:4px 8px 10px;font:800 11px Manrope,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9898a4}
+.np-i{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:16px;text-decoration:none;color:#0c0c10;font:700 14.5px Manrope,sans-serif}
+a.np-i:hover{background:#fff;box-shadow:0 0 0 1px rgba(12,12,16,.07)}
+.np-i em{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:11px;background:#f2f2f6;font:400 9px "Press Start 2P",monospace;font-style:normal;color:#0c0c10}
+.np-i em svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.np-i span{flex:1;min-width:0}.np-i small{display:block;font:600 12px Manrope,sans-serif;color:#9898a4}
+.np-i.cur{background:linear-gradient(120deg,#e2f3ff,#ffe3f1);box-shadow:inset 0 0 0 1.5px rgba(30,155,255,.4)}.np-i.cur em{background:#1e9bff;color:#fff}.np-i.cur small{color:#4d4d58}
+.np-i.lk{color:#9898a4}.np-i.lk em{color:#b3b4c0}
+.np-i u{flex:none;position:relative;width:38px;height:22px;border-radius:99px;background:#e6e6ec;box-shadow:inset 0 2px 4px rgba(0,0,0,.12);text-decoration:none}
+.np-i u::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 2px 5px rgba(0,0,0,.2)}
+.np-i u.on{background:linear-gradient(180deg,#ff7cc2,#ff2e97)}.np-i u.on::after{left:19px}
+.np-sep{height:1px;margin:8px 10px;background:rgba(12,12,16,.08)}
+.tabbar .np-tab svg{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.tabbar a.np-tab.on{color:#1e9bff;background:#e2f3ff}
+.np-shade{position:fixed;inset:0;z-index:54;background:rgba(12,12,16,.28);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:.22s}
+@media (max-width:720px){.np-fab{display:none}
+ .np-menu{left:10px;right:10px;width:auto;bottom:calc(86px + env(safe-area-inset-bottom));z-index:56;padding:8px 10px 10px;border-radius:28px;transform:translateY(24px);transform-origin:center bottom}
+ .np-menu::before{content:"";display:block;width:40px;height:5px;margin:2px auto 8px;border-radius:5px;background:rgba(12,12,16,.16)}
+ .np-shade.on{opacity:1;visibility:visible}}
+.np-end{max-width:1000px;margin:44px auto 0;padding:0 18px}
+.np-end-in{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center;padding:24px 26px;border-radius:28px;background:linear-gradient(120deg,#e2f3ff,#fff 46%,#ffe3f1);color:#0c0c10;box-shadow:inset 0 2px 0 #fff,0 0 0 1px rgba(30,155,255,.2),0 20px 44px rgba(40,30,80,.12)}
+.np-end span{display:block;font:800 11px Manrope,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#ff2e97}
+.np-end b{display:block;margin:8px 0 6px;font:400 clamp(13px,1.7vw,18px)/1.5 "Press Start 2P",monospace;letter-spacing:-.03em;text-transform:uppercase}
+.np-end p{font:600 14.5px/1.5 Manrope,sans-serif;color:#4d4d58}
+.np-end-btns{display:flex;gap:8px;flex-wrap:wrap}
+@media (max-width:720px){.np-end-in{grid-template-columns:1fr;padding:20px}.np-a{padding:9px 11px;font-size:12.5px}}
+</style>
+<script>
+(function(){
+var H="https://katrinivanova0616-sys.github.io/neuropedalirovanie/",B="https://katrinivanova0616-sys.github.io/",C=[["workbook-01", "Claude и ChatGPT", "wb01"], ["workbook-02", "AI-дизайн", "wb02"], ["workbook-04", "AI-монтаж", "wb04"], ["workbook-foto", "Нейрофотосессии", "wbfoto"], ["workbook-video", "AI-видеопродакшн", "wbvideo"]],I=3,K=C[I][2];
+function get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}}
+function st(k){try{var c=get(k+'-checks')||{},d=0;if(k===K){var all=document.querySelectorAll('.check'),t=all.length;[].forEach.call(all,function(b){if(c[b.dataset.check])d++});try{localStorage.setItem('np-prog-'+K,JSON.stringify({d:d,t:t}))}catch(e){}return{d:d,t:t}}var p=get('np-prog-'+k);return p&&p.t?p:{d:0,t:1}}catch(e){return{d:0,t:1}}}
+var openAll=get('np-open')===1;
+var HOME='<svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v9h12v-9"/></svg>',R='<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',Lf='<svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>',LK='<svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>';
+var br=document.querySelector('.brand');if(br&&!br.querySelector('a')){br.innerHTML='<a href="'+H+'" title="На главную курса">'+HOME+'<span>'+br.innerHTML+'</span></a>'}
+[].forEach.call(document.querySelectorAll('footer a[href*="github.io/workbook-"]'),function(a){a.parentNode.removeChild(a)});
+var fab=document.createElement('button');fab.type='button';fab.className='np-fab';fab.setAttribute('aria-label','Меню курса');fab.innerHTML='<i></i>';
+var menu=document.createElement('nav');menu.className='np-menu';document.body.appendChild(menu);document.body.appendChild(fab);
+var shade=document.createElement('div');shade.className='np-shade';document.body.appendChild(shade);var tab=null;
+var tb=document.querySelector('.tabbar');if(tb){var ls=tb.querySelectorAll('a');if(ls.length===5){var first=ls[0];first.lastChild.nodeValue='Папки';tb.removeChild(ls[1]);tb.removeChild(ls[2]);tb.style.gridTemplateColumns='repeat(4,1fr)';tab=document.createElement('a');tab.href='#';tab.className='np-tab';tab.innerHTML=HOME+'Главная';tb.insertBefore(tab,first);tab.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();tog()})}}
+function tog(v){var on=v===undefined?!menu.classList.contains('on'):v;menu.classList.toggle('on',on);fab.classList.toggle('on',on);shade.classList.toggle('on',on);if(tab)tab.classList.toggle('on',on)}
+fab.addEventListener('click',function(e){e.stopPropagation();tog()});document.addEventListener('click',function(e){if(!e.target.closest('.np-menu'))tog(false)});document.addEventListener('keydown',function(e){if(e.key==='Escape')tog(false)});
+var end=document.createElement('section');end.className='np-end';
+var ft=document.querySelector('footer');if(ft)ft.parentNode.insertBefore(end,ft);
+function n2(i){return (i<9?'0':'')+(i+1)}
+function draw(){
+ var me=st(K),full=me.t>0&&me.d>=me.t,left=me.t-me.d,pct=me.t?Math.round(me.d/me.t*100):0;
+ var prevOk=I===0||openAll||(function(){var p=st(C[I-1][2]);return p.d>=p.t})();
+ var nextOpen=full||openAll;
+ var items='<h6>Куда перейти</h6><a class="np-i" href="'+H+'"><em>'+HOME+'</em><span>Главная<small>Все уроки и библиотека</small></span></a><div class="np-sep"></div>',ok=true;
+ C.forEach(function(c,i){var p=i===I?me:st(c[2]),f=p.t>0&&p.d>=p.t,op=openAll||i===0||ok,sub=i===I?'Ты здесь · '+me.d+' из '+me.t:(f?'Пройден':(op?'Открыт':'Откроется после урока '+i));
+  var inner='<em>'+n2(i)+'</em><span>'+c[1]+'<small>'+sub+'</small></span>'+(op?'<u'+(f?' class="on"':'')+'></u>':LK.replace('<svg','<svg style="width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none;margin-right:10px"'));
+  items+=i===I?'<div class="np-i cur">'+inner+'</div>':(op?'<a class="np-i" href="'+B+c[0]+'/">'+inner+'</a>':'<div class="np-i lk">'+inner+'</div>');ok=f});
+ menu.innerHTML=items;
+ var head,txt,btns='<a class="np-a" href="'+H+'">'+HOME+'На главную</a>';
+ if(full){head='Урок '+n2(I)+' пройден';txt=I<C.length-1?'Все шаги отмечены. Открыт следующий урок — «'+C[I+1][1]+'».':'Это был последний урок курса. Поздравляю — ты прошёл всё от настройки до своего ролика.'.replace('ты прошёл всё','курс пройден целиком:');if(I<C.length-1)btns+='<a class="np-a dark" href="'+B+C[I+1][0]+'/">Урок '+(I+2)+' · '+C[I+1][1]+R+'</a>'}
+ else{head='Что дальше';txt='Пройди оставшиеся шаги и отметь их в трекерах: осталось '+left+' из '+me.t+'.'+(I<C.length-1?' После этого откроется урок '+(I+2)+' — «'+C[I+1][1]+'».':'');if(I<C.length-1)btns+=(openAll?'<a class="np-a dark" href="'+B+C[I+1][0]+'/">Урок '+(I+2)+R+'</a>':'<span class="np-a off">'+LK+'Урок '+(I+2)+'</span>')}
+ end.innerHTML='<div class="np-end-in"><div><span>Нейропедалирование · урок '+(I+1)+' из '+C.length+'</span><b>'+head+'</b><p>'+txt+'</p></div><div class="np-end-btns">'+btns+'</div></div>';
+}
+draw();
+document.addEventListener('click',function(e){if(e.target.closest&&(e.target.closest('.check')||e.target.closest('#resetProg')||e.target.closest('#loadProg')))setTimeout(draw,120)});
+window.addEventListener('storage',draw);setTimeout(draw,1200);
+})();
+</script>
+<!-- /NP-NAV -->
 </body>
 </html>
